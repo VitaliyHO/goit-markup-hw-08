@@ -18,7 +18,7 @@
 
 <body>
   <header class="header-section">
-    <div class="container flex-container">
+    <div class="header-container container flex-container">
       <nav class="navigation">
         <a class="logo logo--black link" href="./index.html">Web<span class="black-text">Studio</span></a>
         <ul class="navigation__list list">
@@ -44,6 +44,12 @@
             +38 096 111 11 11</a>
         </li>
       </ul>
+      <div>
+        <svg class="menu-icon">
+          <use class="menu-icon__burger" href="./image/icons/icons.svg#mobile-menu" width="40" height="40"></use>
+          <use class="menu-icon__cross" href="./image/icons/icons.svg#mobile-menu-cross" width="40" height="40"></use>
+        </svg>
+      </div>
     </div>
   </header>
   <main class="studio">
@@ -105,7 +111,7 @@
     <section class="preference-section section">
       <div class="container">
         <h2 class="visually-hidden">Нашы преимущества</h2>
-        <ul class="preference list flex-container">
+        <ul class="preference list">
           <li class="preference__item">
             <div class="preference__card">
               <svg class="preference__icon">
