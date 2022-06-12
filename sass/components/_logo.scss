@@ -16,6 +16,14 @@
     .black-text {
         color: #000;
     }
+
+    @include mq(tablet) {
+        margin-right: 88px;
+    }
+
+    @include mq(desktop) {
+        margin-right: 93px;
+    }
 }
 
 .footer-logo {
