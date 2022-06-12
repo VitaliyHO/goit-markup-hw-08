@@ -2,14 +2,37 @@
     padding-bottom: 0;
 }
 
-.preference__item {
-    display: block;
-    width: 270px;
-
-    &:not(:last-child) {
-        margin-right: 30px;
+.preference {
+    @include mq(tablet) {
+        display: flex;
+        flex-wrap: wrap;
     }
 }
+
+.preference__item {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+
+    // width: 270px;
+    @include mq(tablet) {
+        width: 354px;
+    }
+
+    @include mq(desktop) {
+        &:not(:last-child) {
+            margin-right: 30px;
+        }
+    }
+
+    @include mq(tablet) {
+        &:nth-child(2n+1) {
+            margin-right: 30px;
+        }
+    }
+
+}
+
 
 .preference__card {
     display: flex;
@@ -33,6 +56,7 @@
     font-size: inherit;
     line-height: 1.14;
     letter-spacing: 0.03em;
+    text-align: center;
     text-transform: uppercase;
 
     color: var(--title-color);
