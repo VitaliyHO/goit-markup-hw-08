@@ -29,10 +29,14 @@
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
             url('../image/background/hero-background-x1.jpg');
 
+        padding-top: 200px;
+        padding-bottom: 200px;
+
         @include mq(retina) {
             background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
                 url('../image/background/hero-background-x2.jpg');
         }
+
     }
 
 
@@ -50,4 +54,9 @@
     text-transform: uppercase;
 
     color: var(--white);
+
+    @include mq(desktop) {
+        font-size: 44px;
+        line-height: 1.36;
+    }
 }
