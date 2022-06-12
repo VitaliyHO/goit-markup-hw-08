@@ -90,6 +90,18 @@ img {
   color: #000;
 }
 
+@media screen and (min-width: 768px) {
+  .logo--black {
+    margin-right: 88px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .logo--black {
+    margin-right: 93px;
+  }
+}
+
 .footer-logo {
   display: block;
   margin-bottom: 20px;
@@ -566,11 +578,8 @@ img {
 }
 
 .contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding-left: 0;
-  margin: 0;
+  margin-left: auto;
 }
 
 @media screen and (max-width: 767.98px) {
@@ -586,16 +595,34 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) {
+  .contacts {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .contacts__item:not(:last-child) {
-  margin-right: 30px;
+  padding-bottom: 10px;
+}
+
+@media screen and (min-width: 1280px) {
+  .contacts__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .contacts__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 32px;
-  padding-bottom: 32px;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -610,6 +637,13 @@ img {
 
 .contacts__link:hover, .contacts__link:focus {
   color: var(--accent-color);
+}
+
+@media screen and (min-width: 1280px) {
+  .contacts__link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contacts__icon {
@@ -627,16 +661,21 @@ img {
   height: 16px;
 }
 
-.menu-icon {
+.mobile-menu-button {
   display: none;
-  width: 40px;
-  height: 40px;
+  border: none;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 767.98px) {
-  .menu-icon {
+  .mobile-menu-button {
     display: block;
   }
+}
+
+.menu-icon {
+  width: 40px;
+  height: 40px;
 }
 
 .menu-icon:hover, .menu-icon:focus {
@@ -681,6 +720,8 @@ img {
   .hero {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/background/hero-background-x1.jpg");
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/background/hero-background-x1.jpg");
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 
@@ -700,6 +741,13 @@ img {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white);
+}
+
+@media screen and (min-width: 1280px) {
+  .page-title {
+    font-size: 44px;
+    line-height: 1.36;
+  }
 }
 
 .preference-section {
