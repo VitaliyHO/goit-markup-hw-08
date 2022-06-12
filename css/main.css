@@ -76,7 +76,8 @@ img {
 
 .logo {
   display: block;
-  margin-right: 95px;
+  padding-top: 16px;
+  padding-bottom: 16px;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -482,6 +483,15 @@ img {
   border-bottom: 1px solid var(--header-line-color);
 }
 
+.header-container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .navigation {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -489,7 +499,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 284px;
 }
 
 .navigation__list {
@@ -500,6 +509,19 @@ img {
   margin-top: 0;
   margin-bottom: 0;
   color: var(--text-color);
+}
+
+@media screen and (max-width: 767.98px) {
+  .navigation__list {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
 }
 
 .navigation__item:not(:last-child) {
@@ -551,6 +573,19 @@ img {
   margin: 0;
 }
 
+@media screen and (max-width: 767.98px) {
+  .contacts {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+
 .contacts__item:not(:last-child) {
   margin-right: 30px;
 }
@@ -592,24 +627,75 @@ img {
   height: 16px;
 }
 
+.menu-icon {
+  display: none;
+  width: 40px;
+  height: 40px;
+}
+
+@media screen and (max-width: 767.98px) {
+  .menu-icon {
+    display: block;
+  }
+}
+
+.menu-icon:hover, .menu-icon:focus {
+  fill: var(--accent-color);
+}
+
 .hero {
-  padding-top: 200px;
-  padding-right: 15px;
-  padding-bottom: 200px;
-  padding-left: 15px;
+  padding-top: 118px;
+  padding-right: 60px;
+  padding-bottom: 118px;
+  padding-left: 60px;
   background-color: #C4C4C4;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/background/hero-background.jpg");
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/background/hero-background.jpg");
-  background-size: 1600px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/background/hero-background-mobile-x1.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/background/hero-background-mobile-x1.jpg");
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/background/hero-background-mobile-x2.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/background/hero-background-mobile-x2.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/background/hero-background-tablet-x1.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/background/hero-background-tablet-x1.jpg");
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/background/hero-background-tablet-x2.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/background/hero-background-tablet-x2.jpg");
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/background/hero-background-x1.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/background/hero-background-x1.jpg");
+  }
+}
+
+@media screen and (min-width: 1280px) and (min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1280px) and (min-resolution: 192dpi), screen and (min-width: 1280px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url("../image/background/hero-background-x2.jpg");
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/background/hero-background-x2.jpg");
+  }
 }
 
 .page-title {
   margin-bottom: 30px;
   font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
+  font-size: 26px;
+  line-height: 1.61;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -620,13 +706,38 @@ img {
   padding-bottom: 0;
 }
 
-.preference__item {
-  display: block;
-  width: 270px;
+@media screen and (min-width: 768px) {
+  .preference {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 
-.preference__item:not(:last-child) {
-  margin-right: 30px;
+.preference__item {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .preference__item {
+    width: 354px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .preference__item:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .preference__item:nth-child(2n+1) {
+    margin-right: 30px;
+  }
 }
 
 .preference__card {
@@ -656,6 +767,7 @@ img {
   font-size: inherit;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  text-align: center;
   text-transform: uppercase;
   color: var(--title-color);
 }
@@ -834,9 +946,6 @@ img {
 }
 
 .subscribe-form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
   -webkit-box-align: end;
