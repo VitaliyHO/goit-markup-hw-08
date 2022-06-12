@@ -1,21 +1,50 @@
 .hero {
-    padding-top: 200px;
-    padding-right: 15px;
-    padding-bottom: 200px;
-    padding-left: 15px;
+    padding-top: 118px;
+    padding-right: 60px;
+    padding-bottom: 118px;
+    padding-left: 60px;
     background-color: #C4C4C4;
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url('../image/background/hero-background.jpg');
-    background-size: 1600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url('../image/background/hero-background-mobile-x1.jpg');
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
+    @include mq(retina) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url('../image/background/hero-background-mobile-x2.jpg');
+    }
+
+    @include mq(tablet) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url('../image/background/hero-background-tablet-x1.jpg');
+
+        @include mq(retina) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url('../image/background/hero-background-tablet-x2.jpg');
+        }
+    }
+
+    @include mq(desktop) {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url('../image/background/hero-background-x1.jpg');
+
+        @include mq(retina) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url('../image/background/hero-background-x2.jpg');
+        }
+    }
+
+
 }
+
 
 .page-title {
     margin-bottom: 30px;
 
     font-weight: 900;
-    font-size: 44px;
-    line-height: 1.36;
+    font-size: 26px;
+    line-height: 1.61;
     text-align: center;
     letter-spacing: 0.06em;
     text-transform: uppercase;
