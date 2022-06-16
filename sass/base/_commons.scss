@@ -2,10 +2,29 @@ body {
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
     font-size: 14px;
+    width: 100%;
 }
 
 img {
     display: block;
+}
+
+.title {
+    margin-bottom: 50px;
+
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.36;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    color: var(--title-color);
+
+    @include mq(not-desktop) {
+        font-size: 28px;
+        line-height: 1.17;
+        margin-bottom: 30px;
+    }
 }
 
 .list {
