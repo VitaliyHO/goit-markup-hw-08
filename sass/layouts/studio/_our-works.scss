@@ -1,13 +1,9 @@
-.title {
-    margin-bottom: 50px;
+.our-work {
+    display: none;
 
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.36;
-    text-align: center;
-    letter-spacing: 0.03em;
-
-    color: var(--title-color);
+    @include mq(desktop) {
+        display: block;
+    }
 }
 
 .work__item:not(:last-child) {
