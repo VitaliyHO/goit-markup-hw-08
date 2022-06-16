@@ -1,9 +1,15 @@
+.clients {
+    margin: -15px;
+}
+
 .clients__item {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 170px;
+    width: 210px;
     height: 90px;
+
+    margin: 15px;
     border: 1px solid #AFB1B8;
     border-radius: 4px;
 
@@ -13,8 +19,12 @@
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-    &:not(:last-child) {
-        margin-right: 30px;
+    @include mq(tablet) {
+        width: 226px;
+    }
+
+    @include mq(desktop) {
+        width: 170px;
     }
 
     &:hover,
