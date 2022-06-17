@@ -1,12 +1,15 @@
 .filter {
-    margin-bottom: 50px;
+    margin: -15px;
+    justify-content: start;
 }
 
-.filter__item:not(:last-child) {
-    margin-right: 8px;
+.filter__item {
+    margin: 8px;
 }
 
-
+.project {
+    margin-top: 50px;
+}
 
 .project__item {
     margin-right: 30px;
