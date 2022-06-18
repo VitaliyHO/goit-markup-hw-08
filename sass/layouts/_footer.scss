@@ -7,17 +7,26 @@
     padding-bottom: 60px;
     align-items: baseline;
 
+
     @include mq(tablet) {
         display: flex;
+    }
+
+    @include mq(desktop) {
+        justify-content: space-between;
     }
 }
 
 .footer-adress {
-    // margin-right: 70px;
     text-align: center;
 
     @include mq(tablet) {
         margin-right: 165px;
+    }
+
+    @include mq(desktop) {
+        margin-right: 70px;
+        text-align: start;
     }
 }
 
@@ -46,11 +55,21 @@
 }
 
 .subscribe {
-    // margin-right: 95px;
-    margin-bottom: 60px;
-    width: 300px;
+
 
     text-align: center;
+
+    @include mq(mobile-only) {
+        width: 300px;
+    }
+
+    @include mq(not-desktop) {
+        margin-bottom: 60px;
+    }
+
+    @include mq(desktop) {
+        margin-right: 95px;
+    }
 }
 
 .subscribe__title {
@@ -64,18 +83,24 @@
 }
 
 .subscribe-form {
-    // display: flex;
-    // flex-wrap: nowrap;
-    // align-items: flex-end;
-    width: 100%;
 
     text-align: center;
+
+    @include mq(desktop) {
+        display: flex;
+        align-items: flex-end;
+    }
 }
 
 .subscribe-form__field {
     display: block;
-    margin-bottom: 20px;
+
+    margin-right: 12px;
     color: var(--white);
+
+    @include mq(not-desktop) {
+        margin-bottom: 20px;
+    }
 }
 
 .subscribe-form__label {
@@ -85,7 +110,6 @@
 }
 
 .subscribe-form__mail {
-    // margin-right: 12px;
     width: 360px;
     padding: 15px 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
