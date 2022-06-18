@@ -15,6 +15,7 @@
 }
 
 .mobile-menu.is-hidden {
+    display: none;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
