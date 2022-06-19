@@ -15,6 +15,12 @@
         }
     }
 
+    @if $type =='tablet-only' {
+        @media screen and (min-width: $tablet) and (max-width: $desktop) {
+            @content;
+        }
+    }
+
     @if $type =='tablet' {
         @media screen and (min-width: $tablet) {
             @content;
