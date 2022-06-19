@@ -69,8 +69,15 @@ img {
 }
 
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1280px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .container {
@@ -216,8 +223,8 @@ img {
   background-color: var(--background-color);
   border-radius: 4px;
   border: 0;
-  -webkit-transition-property: background-color, color;
-  transition-property: background-color, color;
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
   -webkit-transition-duration: 250ms;
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -894,8 +901,10 @@ img {
   }
 }
 
-.preference-section {
-  padding-bottom: 0;
+@media screen and (min-width: 1280px) {
+  .preference-section {
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1246,9 +1255,25 @@ img {
 
 .filter {
   margin: -15px;
+  margin-bottom: 40px;
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: start;
+}
+
+@media screen and (min-width: 768px) {
+  .filter {
+    margin-bottom: 30px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .filter {
+    margin-bottom: 50px;
+  }
 }
 
 .filter__item {
@@ -1256,7 +1281,10 @@ img {
 }
 
 .project {
-  margin-top: 50px;
+  margin: -15px;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
 }
 
 .project__item {
@@ -1269,29 +1297,15 @@ img {
           transition-duration: 250ms;
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 15px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1280px) {
   .project__item {
-    width: calc((100% - 30px) / 2);
+    width: 354px;
   }
-  .project__item :nth-child(2n+1) {
-    margin-right: 30px;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .project__item {
-    margin-right: 30px;
-  }
-  .project__item:nth-child(3n) {
-    margin-right: 0;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .project__item:nth-last-child(-n+3) {
-    margin-bottom: 0;
+  .project__item:first-child .project__description {
+    height: 147px;
   }
 }
 
@@ -1309,6 +1323,11 @@ img {
 .image-container {
   position: relative;
   overflow: hidden;
+  margin: 0;
+}
+
+.projects-image {
+  margin: 0;
 }
 
 .overlay {
