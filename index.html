@@ -166,7 +166,11 @@
         <ul class="work list flex-container">
           <li class="work__item">
             <div class="work__image-container">
-              <img class="work__image" src="./image/studio/1.jpg" alt="Разработчик пишет код" width="370" />
+              <img class="work__image" srcset="
+              ./image/studio/our-work/desktop-app_370.jpg 370w,
+              ./image/studio/our-work/desktop-app_x2_740.jpg 740w" sizes="370px"
+                src="./image/studio/our-work/desktop-app_370.jpg" alt="Разработчик пишет код" width="370"
+                loading="lazy" />
               <p class="work__description">
                 Десктопные приложения
               </p>
@@ -174,8 +178,11 @@
           </li>
           <li class="work__item">
             <div class="work__image-container">
-              <img class="work__image" src="./image/studio/2.jpg" alt="Адаптация сайта под разние устройства"
-                width="370" />
+              <img class="work__image" srcset="
+              ./image/studio/our-work/mobile-app_370.jpg 370w,
+              ./image/studio/our-work/mobile-app_x2_740.jpg 740w" sizes="370px"
+                src="./image/studio/our-work/mobile-app_370.jpg" alt="Адаптация сайта под разние устройства" width="370"
+                loading="lazy" />
               <p class="work__description">
                 Мобильные приложения
               </p>
@@ -183,7 +190,10 @@
           </li>
           <li class="work__item">
             <div class="work__image-container">
-              <img class="work__image" src="./image/studio/3.jpg" alt="Подбор цветов" width="370" />
+              <img class="work__image" srcset="
+              ./image/studio/our-work/design_370.jpg 370w,
+              ./image/studio/our-work/design_x2_740.jpg 740w" sizes="370px"
+                src="./image/studio/our-work/design_370.jpg" alt="Подбор цветов" width="370" loading="lazy" />
               <p class="work__description">
                 Дизайнерские решения
               </p>
@@ -197,10 +207,15 @@
         <h2 class="title">Наша команда</h2>
         <ul class="team list flex-container">
           <li class="team__item">
-            <picture>
-              <source />
-            </picture>
-            <img class="employee-photo" src="./image/studio/igor.jpg" alt="Игорь Демьяненко" width="270" />
+            <img class="employee-photo" srcset="
+            ./image/studio/team/igor/igor-desktop_270.jpg 270w,
+            ./image/studio/team/igor/igor-tablet_354.jpg 354w,
+            ./image/studio/team/igor/igor-mobile_450.jpg 450w,
+            ./image/studio/team/igor/igor-desktop_x2_540.jpg 540w,
+            ./image/studio/team/igor/igor-tablet_x2_708.jpg 708w,
+            ./image/studio/team/igor/igor-mobile_x2_900.jpg 900w"
+              sizes="(min-width: 1280) 270px, (min-width: 768) 354px, (max-width: 767) 450px, 100vw"
+              src="./image/studio/team/igor/igor-desktop_270.jpg" alt="Игорь Демьяненко" width="270" loading="lazy" />
             <div class="employee">
               <h3 class="employee__subtitle">Игорь Демьяненко</h3>
               <p class="employee__text" lang="en">Product Designer</p>
@@ -237,7 +252,15 @@
             </div>
           </li>
           <li class="team__item">
-            <img class="employee-photo" src="./image/studio/olga.jpg" alt="Ольга Репина" width="270" />
+            <img class="employee-photo" srcset="
+            ./image/studio/team/olga/olga-desktop_270.jpg 270w,
+            ./image/studio/team/olga/olga-tablet_354.jpg 354w,
+            ./image/studio/team/olga/olga-mobile_450.jpg 450w,
+            ./image/studio/team/olga/olga-desktop_x2_540.jpg 540w,
+            ./image/studio/team/olga/olga-tablet_x2_708.jpg 708w,
+            ./image/studio/team/olga/olga-mobile_x2_900.jpg 900w"
+              sizes="(min-width: 1280) 270px, (min-width: 768) 354px, (max-width: 767) 450px, 100vw"
+              src="./image/studio/team/olga/olga-desktop_270.jpg" alt="Ольга Репина" width="270" loading="lazy" />
             <div class="employee">
               <h3 class="employee__subtitle">Ольга Репина</h3>
               <p class="employee__text" lang="en">Frontend Developer</p>
@@ -274,7 +297,16 @@
             </div>
           </li>
           <li class="team__item">
-            <img class="employee-photo" src="./image/studio/nikolai.jpg" alt="Николай Тарасов" width="270" />
+            <img class="employee-photo" srcset="
+            ./image/studio/team/nikolai/nikolai-desktop_270.jpg 270w,
+            ./image/studio/team/nikolai/nikolai-tablet_354.jpg 354w,
+            ./image/studio/team/nikolai/nikolai-mobile_450.jpg 450w,
+            ./image/studio/team/nikolai/nikolai-desktop_x2_540.jpg 540w,
+            ./image/studio/team/nikolai/nikolai-tablet_x2_708.jpg 708w,
+            ./image/studio/team/nikolai/nikolai-mobile_x2_900.jpg 900w"
+              sizes="(min-width: 1280) 270px, (min-width: 768) 354px, (max-width: 767) 450px, 100vw"
+              src="./image/studio/team/nikolai/nikolai-desktop_270.jpg" alt="Николай Тарасов" width="270"
+              loading="lazy" />
             <div class="employee">
               <h3 class="employee__subtitle">Николай Тарасов</h3>
               <p class="employee__text" lang="en">Marketing</p>
@@ -311,7 +343,16 @@
             </div>
           </li>
           <li class="team__item">
-            <img class="employee-photo" src="./image/studio/michael.jpg" alt="Михаил Ермаков" width="270" />
+            <img class="employee-photo" srcset="
+            ./image/studio/team/michael/michael-desktop_270.jpg 270w,
+            ./image/studio/team/michael/michael-tablet_354.jpg 354w,
+            ./image/studio/team/michael/michael-mobile_450.jpg 450w,
+            ./image/studio/team/michael/michael-desktop_x2_540.jpg 540w,
+            ./image/studio/team/michael/michael-tablet_x2_708.jpg 708w,
+            ./image/studio/team/michael/michael-mobile_x2_900.jpg 900w"
+              sizes="(min-width: 1280) 270px, (min-width: 768) 354px, (max-width: 767) 450px, 100vw"
+              src="./image/studio/team/michael/michael-desktop_270.jpg" alt="Михаил Ермаков" width="270"
+              loading="lazy" />
             <div class="employee">
               <h3 class="employee__subtitle">Михаил Ермаков</h3>
               <p class="employee__text" lang="en">UI Designer</p>
