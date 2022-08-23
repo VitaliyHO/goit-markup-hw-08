@@ -2,16 +2,18 @@
 
 import {workItems} from './work-items.js';
 
-
+const projectsFilter = document.querySelector('.filter')
 const projectContainer = document.querySelector('.project');
 const projectMarkup = createPortfolio(workItems);
 
-// console.log(projectMarkup)
+
+// console.log(projectsFilter)
+
 
 projectContainer.insertAdjacentHTML('beforeend', projectMarkup);
 
 function createPortfolio(projects) {
-    return projects.map(({link, srcset, sizes, src, alt, width, overlayDesc, projectTitle, projectText,}) => {
+    return projects.map(({ link, srcset, sizes, src, alt, width, overlayDesc, projectTitle, projectText,}) => {
         return `
         <li class="project__item">
             <a class="project__link link" href="${link}">
@@ -31,6 +33,27 @@ function createPortfolio(projects) {
                 <p class="project__text">${projectText}</p>
               </div>
             </a>
-          </li>`
-    }).join('');
-}
+            </li>`
+        }).join('');
+    };
+
+    const project = projectContainer.children;
+    
+
+    projectsFilter.addEventListener('click', onFilterButtonClick)
+
+function onFilterButtonClick(event) {
+       const filterCategory = event.target.textContent;
+       
+
+//    if(filterCategory === 'Все') {
+//     return 
+//    };
+console.log(project)
+
+   let filteredProjects = project.filter(element => element.querySelector('.project__text').textContent !== filterCategory)
+   .forEach(element => element.classList.add("visually-hidden"));
+   
+   console.log(filteredProjects)
+};
+
