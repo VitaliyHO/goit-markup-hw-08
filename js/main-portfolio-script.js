@@ -13,9 +13,9 @@ const projectMarkup = createPortfolio(workItems);
 projectContainer.insertAdjacentHTML('beforeend', projectMarkup);
 
 function createPortfolio(projects) {
-    return projects.map(({ link, srcset, sizes, src, alt, width, overlayDesc, projectTitle, projectText,}) => {
+    return projects.map(({data, link, srcset, sizes, src, alt, width, overlayDesc, projectTitle, projectText,}) => {
         return `
-        <li class="project__item">
+        <li class="project__item" data-filter="${data}">
             <a class="project__link link" href="${link}">
               <div class="image-container">
                 <img class="projects-image" srcset="${srcset}"
@@ -37,23 +37,26 @@ function createPortfolio(projects) {
         }).join('');
     };
 
-    const project = projectContainer.children;
     
-
+    
     projectsFilter.addEventListener('click', onFilterButtonClick)
+    
+    function onFilterButtonClick(event) {
+      const filterCategory = event.target.dataset.filter;
+      
+      const allProjects = document.querySelectorAll('.project__item');    
 
-function onFilterButtonClick(event) {
-       const filterCategory = event.target.textContent;
-       
+      console.log(event.target.dataset.filter);
+      
 
-//    if(filterCategory === 'Все') {
-//     return 
-//    };
-console.log(project)
+    allProjects.forEach(element => {
+      element.style.display = "block"
 
-   let filteredProjects = project.filter(element => element.querySelector('.project__text').textContent !== filterCategory)
-   .forEach(element => element.classList.add("visually-hidden"));
-   
-   console.log(filteredProjects)
-};
-
+      // if(element.dataset.filter === 'all') {
+      //   element.style.display = "block";
+      //      };
+      
+      if(event.target.dataset.filter !== 'all' && element.dataset.filter !== filterCategory){
+        element.style.display = "none";
+      } });
+    }
